@@ -1,6 +1,5 @@
 import { useLanguage } from "../i18n/LanguageContext";
 import { HeartIcon, BriefcaseIcon, ActivityIcon, StarIcon } from "./icons";
-import SignIcon from "./SignIcon";
 import "./PhonePreview.css";
 
 const SCORE_ICONS = [HeartIcon, BriefcaseIcon, ActivityIcon, StarIcon];
@@ -15,7 +14,11 @@ function PhonePreview() {
       <div className="yz-phone__screen">
         <div className="yz-phone__hero">
           <div className="yz-phone__hero-glow" />
-          <SignIcon sign={showcase.signKey} size={62} className="yz-phone__hero-glyph" />
+          <img
+            src={`/constellations/${showcase.signKey}.png`}
+            alt=""
+            className="yz-phone__hero-constellation"
+          />
         </div>
 
         <div className="yz-phone__signhead">

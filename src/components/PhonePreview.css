@@ -31,8 +31,8 @@
 
 .yz-phone__hero {
   position: relative;
-  width: 88px;
-  height: 88px;
+  width: 148px;
+  height: 148px;
   margin: 0 auto var(--yz-sp-sm);
   display: flex;
   align-items: center;
@@ -41,13 +41,18 @@
 
 .yz-phone__hero-glow {
   position: absolute;
-  inset: 0;
+  inset: -10px;
   border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--yz-gold) 30%, transparent) 0%, transparent 70%);
+  background:
+    radial-gradient(circle, color-mix(in srgb, var(--yz-gold) 26%, transparent) 0%, transparent 62%),
+    radial-gradient(circle, color-mix(in srgb, var(--yz-violet) 16%, transparent) 0%, transparent 72%);
 }
 
-.yz-phone__hero-glyph {
+.yz-phone__hero-constellation {
   position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .yz-phone__signhead {

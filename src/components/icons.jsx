@@ -59,11 +59,11 @@ export function BarsIcon({ stroke = "var(--yz-gold)" }) {
   );
 }
 
-export function HeartIcon({ stroke = "var(--yz-muted)" }) {
+export function HeartIcon({ stroke = "var(--yz-muted)", size = 16 }) {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
       <path
-        d="M12 20 C7 16 3 13 3 8.8 C3 6.1 5.1 4 7.7 4 C9.4 4 10.9 4.9 12 6.3 C13.1 4.9 14.6 4 16.3 4 C18.9 4 21 6.1 21 8.8 C21 13 17 16 12 20 Z"
+        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
         stroke={stroke}
         {...common}
       />
@@ -71,29 +71,28 @@ export function HeartIcon({ stroke = "var(--yz-muted)" }) {
   );
 }
 
-export function BriefcaseIcon({ stroke = "var(--yz-muted)" }) {
+export function BriefcaseIcon({ stroke = "var(--yz-muted)", size = 16 }) {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-      <rect x="3" y="7.5" width="18" height="12" rx="2" stroke={stroke} {...common} />
-      <path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" stroke={stroke} {...common} />
-      <line x1="3" y1="12.5" x2="21" y2="12.5" stroke={stroke} {...common} />
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" stroke={stroke} {...common} />
+      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke={stroke} {...common} />
     </svg>
   );
 }
 
-export function ActivityIcon({ stroke = "var(--yz-muted)" }) {
+export function ActivityIcon({ stroke = "var(--yz-muted)", size = 16 }) {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-      <polyline points="3,13 8,13 10,7 14,19 16,13 21,13" stroke={stroke} {...common} />
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" stroke={stroke} {...common} />
     </svg>
   );
 }
 
-export function StarIcon({ stroke = "var(--yz-muted)" }) {
+export function StarIcon({ stroke = "var(--yz-muted)", size = 16 }) {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-      <path
-        d="M12 3.5 L14.5 9.3 L20.8 9.9 L16 14 L17.5 20.2 L12 16.9 L6.5 20.2 L8 14 L3.2 9.9 L9.5 9.3 Z"
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <polygon
+        points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
         stroke={stroke}
         {...common}
       />
@@ -104,9 +103,9 @@ export function StarIcon({ stroke = "var(--yz-muted)" }) {
 export function CameraIcon({ stroke = "#FFFFFF", size = 20 }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
-      <rect x="3" y="6.5" width="18" height="14" rx="3" stroke={stroke} {...common} />
-      <path d="M8.5 6.5 L9.8 4 h4.4 l1.3 2.5" stroke={stroke} {...common} />
-      <circle cx="12" cy="13.5" r="3.6" stroke={stroke} {...common} />
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke={stroke} {...common} />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke={stroke} {...common} />
+      <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke={stroke} strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -115,7 +114,7 @@ export function ChatIcon({ stroke = "#FFFFFF", size = 20 }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
       <path
-        d="M4 12.2 C4 7.7 7.8 4 12.4 4 C17 4 20.5 7.4 20.5 11.7 C20.5 16 17 19.4 12.4 19.4 C11.1 19.4 9.9 19.1 8.8 18.6 L4.5 20 L5.8 16.3 C4.7 15.1 4 13.7 4 12.2 Z"
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
         stroke={stroke}
         {...common}
       />
@@ -123,11 +122,14 @@ export function ChatIcon({ stroke = "#FFFFFF", size = 20 }) {
   );
 }
 
-export function FlagIcon({ stroke = "#FFFFFF", size = 20 }) {
+export function FacebookIcon({ stroke = "#FFFFFF", size = 20 }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
-      <path d="M5 3.5 V20.5" stroke={stroke} {...common} />
-      <path d="M5 4.5 C8 3 10.5 6 14 4.5 C16 3.6 17.5 4 19 5 V13 C17.5 12 16 11.6 14 12.5 C10.5 14 8 11 5 12.5 Z" stroke={stroke} {...common} />
+      <path
+        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+        stroke={stroke}
+        {...common}
+      />
     </svg>
   );
 }
@@ -135,11 +137,11 @@ export function FlagIcon({ stroke = "#FFFFFF", size = 20 }) {
 export function ShareArrowIcon({ stroke = "var(--yz-gold)", size = 20 }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
-      <circle cx="6" cy="12" r="2.4" stroke={stroke} {...common} />
-      <circle cx="17.5" cy="5.5" r="2.4" stroke={stroke} {...common} />
-      <circle cx="17.5" cy="18.5" r="2.4" stroke={stroke} {...common} />
-      <line x1="8.1" y1="10.9" x2="15.4" y2="6.7" stroke={stroke} {...common} />
-      <line x1="8.1" y1="13.1" x2="15.4" y2="17.3" stroke={stroke} {...common} />
+      <circle cx="18" cy="5" r="3" stroke={stroke} {...common} />
+      <circle cx="6" cy="12" r="3" stroke={stroke} {...common} />
+      <circle cx="18" cy="19" r="3" stroke={stroke} {...common} />
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke={stroke} {...common} />
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke={stroke} {...common} />
     </svg>
   );
 }

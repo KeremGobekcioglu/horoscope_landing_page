@@ -1,6 +1,7 @@
 .yz-how {
   border-top: 1px solid var(--yz-border-soft);
   text-align: center;
+  scroll-margin-top: var(--yz-sp-xxl);
 }
 
 .yz-how__eyebrow {
