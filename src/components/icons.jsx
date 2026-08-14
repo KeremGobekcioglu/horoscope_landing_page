@@ -59,6 +59,48 @@ export function BarsIcon({ stroke = "var(--yz-gold)" }) {
   );
 }
 
+export function HeartIcon({ stroke = "var(--yz-muted)" }) {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <path
+        d="M12 20 C7 16 3 13 3 8.8 C3 6.1 5.1 4 7.7 4 C9.4 4 10.9 4.9 12 6.3 C13.1 4.9 14.6 4 16.3 4 C18.9 4 21 6.1 21 8.8 C21 13 17 16 12 20 Z"
+        stroke={stroke}
+        {...common}
+      />
+    </svg>
+  );
+}
+
+export function BriefcaseIcon({ stroke = "var(--yz-muted)" }) {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <rect x="3" y="7.5" width="18" height="12" rx="2" stroke={stroke} {...common} />
+      <path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" stroke={stroke} {...common} />
+      <line x1="3" y1="12.5" x2="21" y2="12.5" stroke={stroke} {...common} />
+    </svg>
+  );
+}
+
+export function ActivityIcon({ stroke = "var(--yz-muted)" }) {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <polyline points="3,13 8,13 10,7 14,19 16,13 21,13" stroke={stroke} {...common} />
+    </svg>
+  );
+}
+
+export function StarIcon({ stroke = "var(--yz-muted)" }) {
+  return (
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <path
+        d="M12 3.5 L14.5 9.3 L20.8 9.9 L16 14 L17.5 20.2 L12 16.9 L6.5 20.2 L8 14 L3.2 9.9 L9.5 9.3 Z"
+        stroke={stroke}
+        {...common}
+      />
+    </svg>
+  );
+}
+
 const ICONS = { sun: SunIcon, venn: VennIcon, calendar: CalendarIcon, bars: BarsIcon };
 
 export function Icon({ name, stroke }) {

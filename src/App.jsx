@@ -2,6 +2,7 @@ import StarField from "./components/StarField";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Showcase from "./components/Showcase";
+import CalendarSection from "./components/CalendarSection";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import CompatExample from "./components/CompatExample";
@@ -17,6 +18,7 @@ function App() {
         <Header />
         <Hero />
         <Showcase />
+        <CalendarSection />
         <HowItWorks />
         <Features />
         <CompatExample />

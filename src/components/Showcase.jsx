@@ -6,7 +6,7 @@ function Showcase() {
   const { t } = useLanguage();
 
   return (
-    <section className="yz-showcase yz-section yz-panel">
+    <section className="yz-showcase yz-section">
       <div className="yz-container yz-showcase__layout">
         <div className="yz-showcase__copy">
           <p className="yz-eyebrow">{t.showcase.eyebrow}</p>

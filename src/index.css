@@ -135,10 +135,6 @@ button:focus-visible {
   padding: var(--yz-sp-huge) 0;
 }
 
-.yz-panel {
-  background: var(--yz-surface);
-}
-
 .yz-eyebrow {
   font-size: 12px;
   font-weight: 600;

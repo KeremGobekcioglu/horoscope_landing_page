@@ -29,98 +29,166 @@
   padding: var(--yz-sp-lg) var(--yz-sp-md) var(--yz-sp-md);
 }
 
-.yz-phone__topline {
+.yz-phone__hero {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto var(--yz-sp-sm);
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: var(--yz-sp-md);
+  justify-content: center;
 }
 
-.yz-phone__glyph {
+.yz-phone__hero-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--yz-gold) 30%, transparent) 0%, transparent 70%);
+}
+
+.yz-phone__hero-glyph {
+  position: relative;
   font-family: var(--yz-font-display);
-  font-size: 15px;
+  font-size: 34px;
   color: var(--yz-gold);
 }
 
-.yz-phone__tabs {
+.yz-phone__signhead {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 4px;
-  background: var(--yz-surface);
-  border: 1px solid var(--yz-border);
-  border-radius: var(--yz-radius-pill);
-  padding: 2px;
+  margin-bottom: var(--yz-sp-lg);
 }
 
-.yz-phone__tab {
-  border: none;
-  background: transparent;
+.yz-phone__sign-name {
+  font-family: var(--yz-font-display);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: var(--yz-gold);
+}
+
+.yz-phone__sign-dates {
+  font-size: 10px;
+  letter-spacing: 0.06em;
   color: var(--yz-muted);
-  font-family: var(--yz-font-body);
+}
+
+.yz-phone__card {
+  border: 1px solid var(--yz-border);
+  border-radius: 20px;
+  background: var(--yz-surface);
+  padding: var(--yz-sp-md);
+  margin-bottom: var(--yz-sp-lg);
+}
+
+.yz-phone__label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--yz-sp-sm);
+}
+
+.yz-phone__label-row--energy {
+  margin-bottom: var(--yz-sp-md);
+}
+
+.yz-phone__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yz-gold);
+}
+
+.yz-phone__label {
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 4px 10px;
-  border-radius: var(--yz-radius-pill);
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.14em;
+  color: var(--yz-gold);
 }
 
-.yz-phone__tab:hover {
-  color: var(--yz-ink);
-}
-
-.yz-phone__tab.is-active {
-  background: var(--yz-gold);
-  color: var(--yz-bg);
-}
-
-.yz-phone__heading {
-  font-size: 21px;
+.yz-phone__body {
+  font-size: 12.5px;
+  line-height: 1.6;
   color: var(--yz-ink);
   margin-bottom: var(--yz-sp-sm);
 }
 
-.yz-phone__body {
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: var(--yz-sp-lg);
-  min-height: 42px;
+.yz-phone__readmore {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--yz-muted);
+}
+
+.yz-phone__arrow {
+  color: var(--yz-gold);
+  font-weight: 600;
 }
 
 .yz-phone__scores {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--yz-sp-md);
+  gap: var(--yz-sp-sm);
   margin-bottom: var(--yz-sp-lg);
 }
 
-.yz-phone__score-row {
+.yz-phone__score {
+  border: 1px solid var(--yz-border);
+  border-radius: 14px;
+  background: var(--yz-surface);
+  padding: 10px 12px;
+}
+
+.yz-phone__score-top {
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--yz-muted);
-  margin-bottom: 6px;
-  font-variant-numeric: tabular-nums;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .yz-phone__score-value {
+  font-size: 13px;
+  font-weight: 600;
   color: var(--yz-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.yz-phone__score-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--yz-muted);
+  margin-bottom: 8px;
 }
 
 .yz-phone__score-track {
   height: 3px;
   border-radius: var(--yz-radius-pill);
-  background: var(--yz-border);
+  background: var(--yz-surface-alt);
   overflow: hidden;
 }
 
 .yz-phone__score-fill {
+  position: relative;
   height: 100%;
   background: var(--yz-gold);
   border-radius: var(--yz-radius-pill);
   transition: width 0.4s ease;
+}
+
+.yz-phone__score-fill::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ffd980;
 }
 
 .yz-phone__nav {

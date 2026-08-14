@@ -1,50 +1,60 @@
-import { useState } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
+import { HeartIcon, BriefcaseIcon, ActivityIcon, StarIcon } from "./icons";
 import "./PhonePreview.css";
+
+const SCORE_ICONS = [HeartIcon, BriefcaseIcon, ActivityIcon, StarIcon];
 
 function PhonePreview() {
   const { t } = useLanguage();
   const { showcase } = t;
-  const [activeTab, setActiveTab] = useState(0);
-  const period = showcase.periods[activeTab] ?? showcase.periods[0];
 
   return (
     <div className="yz-phone">
       <div className="yz-phone__notch" />
       <div className="yz-phone__screen">
-        <div className="yz-phone__topline">
-          <span className="yz-phone__glyph">♈</span>
-          <div className="yz-phone__tabs" role="tablist">
-            {showcase.periods.map((p, index) => (
-              <button
-                key={p.tab}
-                type="button"
-                role="tab"
-                aria-selected={index === activeTab}
-                className={`yz-phone__tab ${index === activeTab ? "is-active" : ""}`}
-                onClick={() => setActiveTab(index)}
-              >
-                {p.tab}
-              </button>
-            ))}
+        <div className="yz-phone__hero">
+          <div className="yz-phone__hero-glow" />
+          <span className="yz-phone__hero-glyph">♈</span>
+        </div>
+
+        <div className="yz-phone__signhead">
+          <span className="yz-phone__sign-name">{showcase.signName}</span>
+          <span className="yz-phone__sign-dates">{showcase.signDates}</span>
+        </div>
+
+        <div className="yz-phone__card">
+          <div className="yz-phone__label-row">
+            <span className="yz-phone__dot" />
+            <span className="yz-phone__label">{showcase.dailyLabel}</span>
+          </div>
+          <p className="yz-phone__body">{showcase.body}</p>
+          <div className="yz-phone__readmore">
+            <span>{showcase.readMore}</span>
+            <span className="yz-phone__arrow">→</span>
           </div>
         </div>
 
-        <h3 className="yz-phone__heading">{period.heading}</h3>
-        <p className="yz-phone__body">{period.body}</p>
+        <div className="yz-phone__label-row yz-phone__label-row--energy">
+          <span className="yz-phone__dot" />
+          <span className="yz-phone__label">{showcase.energyLabel}</span>
+        </div>
 
         <div className="yz-phone__scores">
-          {period.scores.map((score) => (
-            <div className="yz-phone__score" key={score.label}>
-              <div className="yz-phone__score-row">
+          {showcase.scores.map((score, index) => {
+            const ScoreIcon = SCORE_ICONS[index];
+            return (
+              <div className="yz-phone__score" key={score.label}>
+                <div className="yz-phone__score-top">
+                  <ScoreIcon />
+                  <span className="yz-phone__score-value">{score.value}/10</span>
+                </div>
                 <span className="yz-phone__score-label">{score.label}</span>
-                <span className="yz-phone__score-value">{score.value}</span>
+                <div className="yz-phone__score-track">
+                  <div className="yz-phone__score-fill" style={{ width: `${score.value * 10}%` }} />
+                </div>
               </div>
-              <div className="yz-phone__score-track">
-                <div className="yz-phone__score-fill" style={{ width: `${score.value}%` }} />
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="yz-phone__nav">

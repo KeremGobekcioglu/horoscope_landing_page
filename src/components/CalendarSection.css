@@ -1,0 +1,36 @@
+.yz-calsection {
+  border-top: 1px solid var(--yz-border-soft);
+}
+
+.yz-calsection__layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  align-items: center;
+  gap: var(--yz-sp-xxl);
+}
+
+.yz-calsection__copy {
+  max-width: 420px;
+}
+
+.yz-calsection__title {
+  font-size: 32px;
+  color: var(--yz-ink);
+  margin-bottom: var(--yz-sp-md);
+}
+
+.yz-calsection__desc {
+  font-size: 16px;
+}
+
+@media (max-width: 860px) {
+  .yz-calsection__layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .yz-calsection__copy {
+    max-width: 480px;
+    margin: var(--yz-sp-xl) auto 0;
+  }
+}

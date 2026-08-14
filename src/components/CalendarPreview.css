@@ -1,0 +1,124 @@
+.yz-cal {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-card);
+  background: var(--yz-surface-alt);
+  padding: var(--yz-sp-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.yz-cal:hover {
+  transform: translateY(-4px);
+  border-color: var(--yz-gold-dim);
+  box-shadow: 0 24px 60px -28px rgba(201, 168, 76, 0.3);
+}
+
+.yz-cal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--yz-sp-md);
+}
+
+.yz-cal__chevron {
+  font-size: 20px;
+  color: var(--yz-gold);
+  width: 24px;
+  text-align: center;
+}
+
+.yz-cal__month {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--yz-gold);
+}
+
+.yz-cal__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: var(--yz-sp-sm);
+}
+
+.yz-cal__weekdays span {
+  text-align: center;
+  font-size: 11px;
+  color: color-mix(in srgb, var(--yz-gold) 80%, transparent);
+}
+
+.yz-cal__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--yz-sp-lg);
+}
+
+.yz-cal__row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.yz-cal__cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yz-cal__day-num {
+  font-size: 13px;
+  color: var(--yz-gold);
+}
+
+.yz-cal__cell--faded .yz-cal__day-num {
+  color: color-mix(in srgb, var(--yz-gold) 40%, transparent);
+}
+
+.yz-cal__day-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--yz-gold) 45%, transparent);
+}
+
+.yz-cal__day-dot.is-lit {
+  background: var(--yz-gold);
+}
+
+.yz-cal__cell--shine {
+  border-color: var(--yz-gold);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--yz-gold) 35%, transparent);
+}
+
+.yz-cal__cell--shine:hover {
+  box-shadow: 0 0 18px color-mix(in srgb, var(--yz-gold) 55%, transparent);
+}
+
+.yz-cal__monthly {
+  border-top: 1px solid var(--yz-border);
+  padding-top: var(--yz-sp-md);
+}
+
+.yz-cal__monthly-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--yz-gold);
+  margin-bottom: var(--yz-sp-sm);
+}
+
+.yz-cal__monthly-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.yz-cal__monthly-text:last-child {
+  margin-bottom: 0;
+}
