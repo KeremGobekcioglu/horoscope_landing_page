@@ -1,10 +1,10 @@
 import { useLanguage } from "../i18n/LanguageContext";
-import { CameraIcon, ChatIcon, FacebookIcon, ShareArrowIcon } from "./icons";
+import { CameraIcon, WhatsAppIcon, FacebookIcon, ShareArrowIcon } from "./icons";
 import "./ShareExample.css";
 
 const OPTION_ICONS = {
   instagram: CameraIcon,
-  whatsapp: ChatIcon,
+  whatsapp: WhatsAppIcon,
   facebook: FacebookIcon,
   general: ShareArrowIcon,
 };
