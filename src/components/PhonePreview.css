@@ -48,9 +48,6 @@
 
 .yz-phone__hero-glyph {
   position: relative;
-  font-family: var(--yz-font-display);
-  font-size: 34px;
-  color: var(--yz-gold);
 }
 
 .yz-phone__signhead {

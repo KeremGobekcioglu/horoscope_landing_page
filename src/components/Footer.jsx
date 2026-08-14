@@ -12,7 +12,9 @@ function Footer() {
           <span className="yz-footer__tagline">{t.footer.tagline}</span>
         </div>
         <div className="yz-footer__meta">
-          <a href="#">{t.footer.privacy}</a>
+          <a href="https://keremgobekcioglu.github.io/yildizname-privacy/" target="_blank" rel="noopener noreferrer">
+            {t.footer.privacy}
+          </a>
           <span>© {new Date().getFullYear()} — {t.footer.rights}</span>
         </div>
       </div>

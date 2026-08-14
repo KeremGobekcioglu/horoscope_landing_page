@@ -1,0 +1,152 @@
+.yz-share {
+  border-top: 1px solid var(--yz-border-soft);
+}
+
+.yz-share__layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  align-items: center;
+  gap: var(--yz-sp-xxl);
+}
+
+.yz-share__copy {
+  max-width: 420px;
+}
+
+.yz-share__title {
+  font-size: 32px;
+  color: var(--yz-ink);
+  margin-bottom: var(--yz-sp-md);
+}
+
+.yz-share__desc {
+  font-size: 16px;
+}
+
+.yz-share__sheet {
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-card) var(--yz-radius-card) 12px 12px;
+  background: var(--yz-surface-alt);
+  padding: var(--yz-sp-md) var(--yz-sp-lg) var(--yz-sp-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.yz-share__sheet:hover {
+  transform: translateY(-4px);
+  border-color: var(--yz-gold-dim);
+  box-shadow: 0 24px 60px -28px rgba(201, 168, 76, 0.3);
+}
+
+.yz-share__handle {
+  display: block;
+  width: 36px;
+  height: 4px;
+  border-radius: var(--yz-radius-pill);
+  background: var(--yz-border);
+  margin: 0 auto var(--yz-sp-md);
+}
+
+.yz-share__sheet-title {
+  display: block;
+  text-align: center;
+  font-family: var(--yz-font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--yz-gold);
+  margin-bottom: var(--yz-sp-lg);
+}
+
+.yz-share__options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--yz-sp-lg);
+}
+
+.yz-share__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 64px;
+}
+
+.yz-share__tile {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--yz-radius-chip);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.yz-share__option:hover .yz-share__tile {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.yz-share__tile--instagram {
+  background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+
+.yz-share__tile--whatsapp {
+  background: #25d366;
+}
+
+.yz-share__tile--facebook {
+  background: #1877f2;
+}
+
+.yz-share__tile--general {
+  background: var(--yz-surface);
+  border: 1px solid var(--yz-border);
+}
+
+.yz-share__option-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--yz-ink);
+  text-align: center;
+}
+
+.yz-share__divider {
+  height: 1px;
+  background: var(--yz-border);
+  margin: var(--yz-sp-sm) 0;
+}
+
+.yz-share__row {
+  display: block;
+  font-size: 13px;
+  color: var(--yz-ink);
+  padding: var(--yz-sp-sm) 0;
+}
+
+.yz-share__close {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--yz-gold);
+  padding-top: var(--yz-sp-md);
+}
+
+@media (max-width: 860px) {
+  .yz-share__layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .yz-share__copy {
+    max-width: 480px;
+    margin: 0 auto var(--yz-sp-xl);
+  }
+
+  .yz-share__sheet {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}

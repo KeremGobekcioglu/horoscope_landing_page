@@ -77,14 +77,7 @@
   position: absolute;
   inset: -14px;
   border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--yz-violet) 35%, transparent) 0%, transparent 72%);
-}
-
-.yz-compat__glyph {
-  position: relative;
-  font-family: var(--yz-font-display);
-  font-size: 28px;
-  color: var(--yz-violet);
+  background: radial-gradient(circle, color-mix(in srgb, var(--yz-gold) 35%, transparent) 0%, transparent 72%);
 }
 
 .yz-compat__sign-name {

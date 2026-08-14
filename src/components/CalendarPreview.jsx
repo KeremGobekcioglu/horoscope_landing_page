@@ -2,7 +2,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 import "./CalendarPreview.css";
 
 const YEAR = 2026;
-const MONTH = 2; // March, 0-indexed
+const MONTH = 7; // August, 0-indexed — earliest month with real reading data
 
 function buildWeeks() {
   const firstOfMonth = new Date(YEAR, MONTH, 1);

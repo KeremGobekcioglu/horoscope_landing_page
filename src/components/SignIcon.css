@@ -1,0 +1,14 @@
+.yz-sign-icon {
+  display: inline-block;
+  background-color: var(--yz-gold);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.yz-sign-icon--violet {
+  background-color: var(--yz-violet);
+}

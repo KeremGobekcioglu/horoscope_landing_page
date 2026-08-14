@@ -6,7 +6,7 @@ import CalendarSection from "./components/CalendarSection";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import CompatExample from "./components/CompatExample";
-import ZodiacStrip from "./components/ZodiacStrip";
+import ShareExample from "./components/ShareExample";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
 
@@ -22,7 +22,7 @@ function App() {
         <HowItWorks />
         <Features />
         <CompatExample />
-        <ZodiacStrip />
+        <ShareExample />
         <Cta />
         <Footer />
       </div>

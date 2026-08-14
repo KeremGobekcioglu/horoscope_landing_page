@@ -1,4 +1,5 @@
 import { useLanguage } from "../i18n/LanguageContext";
+import SignIcon from "./SignIcon";
 import "./CompatExample.css";
 
 function CompatExample() {
@@ -21,7 +22,7 @@ function CompatExample() {
             <div className="yz-compat__sign">
               <div className="yz-compat__sign-icon">
                 <span className="yz-compat__sign-glow" />
-                <span className="yz-compat__glyph">{compat.glyphA}</span>
+                <SignIcon sign={compat.keyA} size={44} />
               </div>
               <span className="yz-compat__sign-name">{compat.signA}</span>
               <span className="yz-compat__sign-element">{compat.elementA}</span>
@@ -36,7 +37,7 @@ function CompatExample() {
             <div className="yz-compat__sign">
               <div className="yz-compat__sign-icon">
                 <span className="yz-compat__sign-glow" />
-                <span className="yz-compat__glyph">{compat.glyphB}</span>
+                <SignIcon sign={compat.keyB} size={44} />
               </div>
               <span className="yz-compat__sign-name">{compat.signB}</span>
               <span className="yz-compat__sign-element">{compat.elementB}</span>

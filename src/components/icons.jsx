@@ -101,6 +101,49 @@ export function StarIcon({ stroke = "var(--yz-muted)" }) {
   );
 }
 
+export function CameraIcon({ stroke = "#FFFFFF", size = 20 }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <rect x="3" y="6.5" width="18" height="14" rx="3" stroke={stroke} {...common} />
+      <path d="M8.5 6.5 L9.8 4 h4.4 l1.3 2.5" stroke={stroke} {...common} />
+      <circle cx="12" cy="13.5" r="3.6" stroke={stroke} {...common} />
+    </svg>
+  );
+}
+
+export function ChatIcon({ stroke = "#FFFFFF", size = 20 }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <path
+        d="M4 12.2 C4 7.7 7.8 4 12.4 4 C17 4 20.5 7.4 20.5 11.7 C20.5 16 17 19.4 12.4 19.4 C11.1 19.4 9.9 19.1 8.8 18.6 L4.5 20 L5.8 16.3 C4.7 15.1 4 13.7 4 12.2 Z"
+        stroke={stroke}
+        {...common}
+      />
+    </svg>
+  );
+}
+
+export function FlagIcon({ stroke = "#FFFFFF", size = 20 }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <path d="M5 3.5 V20.5" stroke={stroke} {...common} />
+      <path d="M5 4.5 C8 3 10.5 6 14 4.5 C16 3.6 17.5 4 19 5 V13 C17.5 12 16 11.6 14 12.5 C10.5 14 8 11 5 12.5 Z" stroke={stroke} {...common} />
+    </svg>
+  );
+}
+
+export function ShareArrowIcon({ stroke = "var(--yz-gold)", size = 20 }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <circle cx="6" cy="12" r="2.4" stroke={stroke} {...common} />
+      <circle cx="17.5" cy="5.5" r="2.4" stroke={stroke} {...common} />
+      <circle cx="17.5" cy="18.5" r="2.4" stroke={stroke} {...common} />
+      <line x1="8.1" y1="10.9" x2="15.4" y2="6.7" stroke={stroke} {...common} />
+      <line x1="8.1" y1="13.1" x2="15.4" y2="17.3" stroke={stroke} {...common} />
+    </svg>
+  );
+}
+
 const ICONS = { sun: SunIcon, venn: VennIcon, calendar: CalendarIcon, bars: BarsIcon };
 
 export function Icon({ name, stroke }) {
