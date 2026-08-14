@@ -1,0 +1,76 @@
+.yz-cta__box {
+  text-align: center;
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-card);
+  background: var(--yz-surface);
+  padding: var(--yz-sp-xxl) var(--yz-sp-lg);
+  box-shadow: 0 40px 80px -48px rgba(0, 0, 0, 0.6);
+}
+
+.yz-cta__title {
+  font-size: 28px;
+  color: var(--yz-ink);
+}
+
+.yz-cta__subtitle {
+  margin-top: var(--yz-sp-sm);
+}
+
+.yz-cta__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--yz-sp-md);
+  margin-top: var(--yz-sp-xl);
+  flex-wrap: wrap;
+}
+
+.yz-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-button);
+  padding: var(--yz-sp-sm) var(--yz-sp-lg);
+  color: var(--yz-ink);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.yz-cta__button--primary {
+  background: var(--yz-gold);
+  border-color: var(--yz-gold);
+  color: var(--yz-bg);
+}
+
+.yz-cta__button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--yz-gold) 55%, transparent);
+}
+
+.yz-cta__button--disabled {
+  color: var(--yz-muted);
+  cursor: default;
+}
+
+.yz-cta__button--disabled:hover {
+  border-color: var(--yz-border);
+}
+
+.yz-cta__badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--yz-muted);
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-pill);
+  padding: 2px 8px;
+}
+
+@media (max-width: 480px) {
+  .yz-cta__buttons {
+    flex-direction: column;
+  }
+}

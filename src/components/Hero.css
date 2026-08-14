@@ -1,0 +1,99 @@
+.yz-hero {
+  position: relative;
+  padding: var(--yz-sp-huge) 0 var(--yz-sp-xxxl);
+  overflow: hidden;
+  text-align: center;
+}
+
+.yz-hero__backdrop {
+  position: absolute;
+  inset: 0;
+  bottom: auto;
+  height: 320px;
+  pointer-events: none;
+}
+
+.yz-hero__constellation {
+  opacity: 0.9;
+}
+
+.yz-hero__glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: 640px;
+  height: 480px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--yz-gold) 16%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.yz-hero__content {
+  position: relative;
+  max-width: 640px;
+}
+
+.yz-hero__eyebrow {
+  display: inline-block;
+}
+
+.yz-hero__title {
+  font-size: clamp(40px, 7vw, 76px);
+  font-weight: 440;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--yz-ink);
+}
+
+.yz-hero__title em {
+  color: var(--yz-gold);
+  font-style: italic;
+  font-weight: 440;
+}
+
+.yz-hero__subtitle {
+  max-width: 460px;
+  margin: var(--yz-sp-lg) auto 0;
+  font-size: 17px;
+}
+
+.yz-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--yz-sp-md);
+  margin-top: var(--yz-sp-xl);
+  flex-wrap: wrap;
+}
+
+.yz-hero__button {
+  display: inline-block;
+  padding: var(--yz-sp-md) var(--yz-sp-xl);
+  border-radius: var(--yz-radius-button);
+  background: var(--yz-gold);
+  color: var(--yz-bg);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid var(--yz-gold);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.yz-hero__button:hover {
+  transform: translateY(-2px);
+  background: #d8bb63;
+  box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--yz-gold) 55%, transparent);
+}
+
+.yz-hero__button--ghost {
+  background: transparent;
+  color: var(--yz-ink);
+  border: 1px solid var(--yz-border);
+}
+
+.yz-hero__button--ghost:hover {
+  transform: translateY(-2px);
+  border-color: var(--yz-gold-dim);
+  background: color-mix(in srgb, var(--yz-gold) 8%, transparent);
+  box-shadow: none;
+}

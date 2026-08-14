@@ -1,0 +1,67 @@
+.yz-wheel {
+  display: flex;
+  justify-content: center;
+}
+
+.yz-wheel__svg {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  overflow: visible;
+}
+
+.yz-wheel__ring {
+  fill: none;
+  stroke: var(--yz-border);
+  stroke-width: 1;
+}
+
+.yz-wheel__ring--inner {
+  stroke: var(--yz-border-soft);
+}
+
+.yz-wheel__tick {
+  stroke: var(--yz-gold);
+  stroke-width: 1;
+  opacity: 0.35;
+}
+
+.yz-wheel__node {
+  fill: var(--yz-gold);
+  transition: r 0.2s ease;
+}
+
+.yz-wheel__label {
+  font-family: var(--yz-font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  fill: var(--yz-muted);
+  transition: fill 0.2s ease;
+}
+
+.yz-wheel__point {
+  cursor: default;
+}
+
+.yz-wheel__point:hover .yz-wheel__label {
+  fill: var(--yz-gold);
+}
+
+.yz-wheel__point:hover .yz-wheel__node {
+  r: 4;
+}
+
+.yz-wheel__center-mark {
+  font-family: var(--yz-font-display);
+  font-size: 22px;
+  fill: var(--yz-gold);
+}
+
+.yz-wheel__center-label {
+  font-family: var(--yz-font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  fill: var(--yz-gold-dim);
+}

@@ -1,0 +1,85 @@
+.yz-how {
+  border-top: 1px solid var(--yz-border-soft);
+  text-align: center;
+}
+
+.yz-how__eyebrow {
+  text-align: center;
+}
+
+.yz-how__title {
+  font-size: 32px;
+  color: var(--yz-ink);
+  margin-bottom: var(--yz-sp-huge);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yz-how__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--yz-sp-lg);
+}
+
+.yz-how__steps::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  height: 1px;
+  background: var(--yz-border);
+}
+
+.yz-how__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--yz-sp-xl);
+}
+
+.yz-how__dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--yz-gold);
+  transition: box-shadow 0.2s ease;
+}
+
+.yz-how__step:hover .yz-how__dot {
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--yz-gold) 18%, transparent);
+}
+
+.yz-how__step-title {
+  font-size: 18px;
+  color: var(--yz-ink);
+  margin-bottom: var(--yz-sp-sm);
+}
+
+.yz-how__step-desc {
+  font-size: 14px;
+  max-width: 240px;
+}
+
+@media (max-width: 720px) {
+  .yz-how__steps {
+    grid-template-columns: 1fr;
+    gap: var(--yz-sp-xxl);
+  }
+
+  .yz-how__steps::before {
+    left: 50%;
+    right: auto;
+    top: 4px;
+    bottom: 4px;
+    width: 1px;
+    height: auto;
+  }
+}

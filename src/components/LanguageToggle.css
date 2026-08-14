@@ -1,0 +1,32 @@
+.yz-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-pill);
+  padding: 6px 12px;
+  font-family: var(--yz-font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--yz-muted);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.yz-lang-toggle:hover {
+  border-color: var(--yz-gold-dim);
+}
+
+.yz-lang-toggle span {
+  transition: color 0.15s ease;
+}
+
+.yz-lang-toggle__divider {
+  color: var(--yz-border);
+}
+
+.yz-lang-toggle .is-active {
+  color: var(--yz-gold);
+}

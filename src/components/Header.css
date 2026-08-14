@@ -1,0 +1,39 @@
+.yz-header {
+  border-bottom: 1px solid var(--yz-border);
+}
+
+.yz-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.yz-header__mark {
+  font-family: var(--yz-font-display);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: var(--yz-gold);
+}
+
+.yz-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--yz-sp-md);
+}
+
+.yz-header__cta {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--yz-ink);
+  border: 1px solid var(--yz-border);
+  border-radius: var(--yz-radius-button);
+  padding: var(--yz-sp-sm) var(--yz-sp-md);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.yz-header__cta:hover {
+  border-color: var(--yz-gold-dim);
+  color: var(--yz-gold);
+}

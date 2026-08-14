@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+1E00-1E9F, U+1EF2-1EFF;
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/fraunces-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+1E00-1E9F, U+1EF2-1EFF;
+}
+
+:root {
+  /* Colour — mirrors core/ui/theme/Color.kt */
+  --yz-bg: #080b1a;
+  --yz-surface: #0f1428;
+  --yz-surface-alt: #141830;
+  --yz-card-bg: #181b2a;
+  --yz-border: #1e2240;
+  --yz-border-soft: #171b34;
+  --yz-gold: #c9a84c;
+  --yz-gold-dim: #8f7a3d;
+  --yz-violet: #6b5b9e;
+  --yz-ink: #e8e8f0;
+  --yz-muted: #8a8aaa;
+
+  /* Shape — mirrors core/ui/theme/Shape.kt */
+  --yz-radius-card: 20px;
+  --yz-radius-chip: 12px;
+  --yz-radius-button: 16px;
+  --yz-radius-pill: 999px;
+
+  /* Spacing — mirrors core/ui/theme/Spacing.kt */
+  --yz-sp-xs: 4px;
+  --yz-sp-sm: 8px;
+  --yz-sp-md: 16px;
+  --yz-sp-lg: 24px;
+  --yz-sp-xl: 32px;
+  --yz-sp-xxl: 48px;
+  --yz-sp-xxxl: 64px;
+  --yz-sp-huge: 96px;
+
+  /* Type */
+  --yz-font-display: "Fraunces", Georgia, serif;
+  --yz-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--yz-bg);
+  color: var(--yz-ink);
+  font-family: var(--yz-font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--yz-font-display);
+  font-weight: 500;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  color: var(--yz-muted);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--yz-gold);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.yz-page {
+  position: relative;
+}
+
+.yz-page__content {
+  position: relative;
+  z-index: 1;
+}
+
+.yz-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 var(--yz-sp-lg);
+}
+
+.yz-section {
+  padding: var(--yz-sp-huge) 0;
+}
+
+.yz-panel {
+  background: var(--yz-surface);
+}
+
+.yz-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--yz-gold-dim);
+  margin-bottom: var(--yz-sp-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
