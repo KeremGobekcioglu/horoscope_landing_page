@@ -14,8 +14,6 @@ function Cta() {
           <a
             className="yz-cta__button yz-cta__button--primary"
             href="https://play.google.com/store/apps/details?id=com.kg.yildizname"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {t.cta.googlePlay}
           </a>
